@@ -1,0 +1,7 @@
+### BLOGS
+GET http://localhost:3333/api/blogs/ HTTP/1.1
+content-type: application/json
+
+### USERS
+GET http://localhost:3333/api/users/ HTTP/1.1
+content-type: application/json

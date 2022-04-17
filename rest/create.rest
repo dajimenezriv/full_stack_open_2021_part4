@@ -1,0 +1,81 @@
+### CORRECT
+POST http://localhost:3333/api/blogs/ HTTP/1.1
+content-type: application/json
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3QiLCJpZCI6IjYyNWJmZjNjNzk3OTc5ZWQxMjJkMDUxNSIsImlhdCI6MTY1MDIwNjE4MH0.IQ8LeCz7nICqvc1F5BeZ320B9VqZtK2KiTAxVUBUVsw
+
+{
+    "title": "first title",
+    "author": "myself",
+    "url": "first_title_url",
+    "likes": 6
+}
+
+### NO AUTHENTICATION
+POST http://localhost:3333/api/blogs/ HTTP/1.1
+content-type: application/json
+
+{
+    "title": "first title",
+    "author": "myself",
+    "url": "first_title_url",
+    "likes": 6
+}
+
+### NO LIKES (LIKES SHOULD BE 0)
+POST http://localhost:3333/api/blogs/ HTTP/1.1
+content-type: application/json
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3QiLCJpZCI6IjYyNWJmZjNjNzk3OTc5ZWQxMjJkMDUxNSIsImlhdCI6MTY1MDIwNjE4MH0.IQ8LeCz7nICqvc1F5BeZ320B9VqZtK2KiTAxVUBUVsw
+
+{
+    "title": "first title",
+    "author": "myself",
+    "url": "first_title_url"
+}
+
+### NO TITLE
+POST http://localhost:3333/api/blogs/ HTTP/1.1
+content-type: application/json
+
+{
+    "author": "myself",
+    "url": "first_title_url"
+}
+
+### NO URL
+POST http://localhost:3333/api/blogs/ HTTP/1.1
+content-type: application/json
+
+{
+    "title": "first title",
+    "author": "myself"
+}
+
+### USER
+POST http://localhost:3333/api/users/ HTTP/1.1
+content-type: application/json
+
+{
+    "username": "root",
+    "name": "Superuser",
+    "password": "password"
+}
+
+### USER INVALID (username.length > 3)
+POST http://localhost:3333/api/users/ HTTP/1.1
+content-type: application/json
+
+{
+    "username": "ro",
+    "name": "Superuser",
+    "password": "password"
+}
+
+### USER INVALID (username.length < 3)
+POST http://localhost:3333/api/users/ HTTP/1.1
+content-type: application/json
+
+{
+    "username": "root2",
+    "name": "Superuser",
+    "password": "pa"
+}

@@ -40,5 +40,8 @@
   },
   "jest": {
     "testEnvironment": "node"
+  },
+  "resolutions": {
+    "minimist": "1.2.6"
   }
 }

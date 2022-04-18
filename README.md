@@ -29,3 +29,20 @@ Contains the different parts of the middleware (ex. how the token and the user a
 
 ## Eslint
 Using Airbnb style.
+
+### How to run?
+
+#### Tests
+
+```console
+npm test
+```
+
+#### Locally
+
+```console
+# development mode
+npm run dev
+# production mode
+npm start
+```

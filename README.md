@@ -40,7 +40,7 @@ npm test
 
 #### Locally
 
-There is no url for frontend. But we can test manually we the requests in the `rest` folder.
+There is no url for frontend. But we can test manually with the requests in the `rest` folder.
 
 ```console
 # development mode

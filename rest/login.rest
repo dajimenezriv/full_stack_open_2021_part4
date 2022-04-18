@@ -1,4 +1,4 @@
-POST http://localhost:3333/api/login/ HTTP/1.1
+POST http://localhost:3003/api/login/ HTTP/1.1
 content-type: application/json
 
 {
@@ -7,7 +7,7 @@ content-type: application/json
 }
 
 ### USERNAME DOESN'T EXIST
-POST http://localhost:3333/api/login/ HTTP/1.1
+POST http://localhost:3003/api/login/ HTTP/1.1
 content-type: application/json
 
 {

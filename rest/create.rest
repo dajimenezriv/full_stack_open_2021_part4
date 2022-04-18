@@ -1,5 +1,5 @@
 ### CORRECT
-POST http://localhost:3333/api/blogs/ HTTP/1.1
+POST http://localhost:3003/api/blogs/ HTTP/1.1
 content-type: application/json
 authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3QiLCJpZCI6IjYyNWJmZjNjNzk3OTc5ZWQxMjJkMDUxNSIsImlhdCI6MTY1MDIwNjE4MH0.IQ8LeCz7nICqvc1F5BeZ320B9VqZtK2KiTAxVUBUVsw
 
@@ -11,7 +11,7 @@ authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb
 }
 
 ### NO AUTHENTICATION
-POST http://localhost:3333/api/blogs/ HTTP/1.1
+POST http://localhost:3003/api/blogs/ HTTP/1.1
 content-type: application/json
 
 {
@@ -22,7 +22,7 @@ content-type: application/json
 }
 
 ### NO LIKES (LIKES SHOULD BE 0)
-POST http://localhost:3333/api/blogs/ HTTP/1.1
+POST http://localhost:3003/api/blogs/ HTTP/1.1
 content-type: application/json
 authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3QiLCJpZCI6IjYyNWJmZjNjNzk3OTc5ZWQxMjJkMDUxNSIsImlhdCI6MTY1MDIwNjE4MH0.IQ8LeCz7nICqvc1F5BeZ320B9VqZtK2KiTAxVUBUVsw
 
@@ -33,7 +33,7 @@ authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb
 }
 
 ### NO TITLE
-POST http://localhost:3333/api/blogs/ HTTP/1.1
+POST http://localhost:3003/api/blogs/ HTTP/1.1
 content-type: application/json
 
 {
@@ -42,7 +42,7 @@ content-type: application/json
 }
 
 ### NO URL
-POST http://localhost:3333/api/blogs/ HTTP/1.1
+POST http://localhost:3003/api/blogs/ HTTP/1.1
 content-type: application/json
 
 {
@@ -51,7 +51,7 @@ content-type: application/json
 }
 
 ### USER
-POST http://localhost:3333/api/users/ HTTP/1.1
+POST http://localhost:3003/api/users/ HTTP/1.1
 content-type: application/json
 
 {
@@ -61,7 +61,7 @@ content-type: application/json
 }
 
 ### USER INVALID (username.length > 3)
-POST http://localhost:3333/api/users/ HTTP/1.1
+POST http://localhost:3003/api/users/ HTTP/1.1
 content-type: application/json
 
 {
@@ -71,7 +71,7 @@ content-type: application/json
 }
 
 ### USER INVALID (username.length < 3)
-POST http://localhost:3333/api/users/ HTTP/1.1
+POST http://localhost:3003/api/users/ HTTP/1.1
 content-type: application/json
 
 {

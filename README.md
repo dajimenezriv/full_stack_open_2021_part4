@@ -47,4 +47,6 @@ There is no url for frontend. But we can test manually with the requests in the 
 npm run dev
 # production mode
 npm start
+# test mode (for cypress)
+npm run start:test
 ```

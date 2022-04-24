@@ -12,6 +12,7 @@ const app = express();
 const blogRouter = require('./controllers/blogs');
 const userRouter = require('./controllers/users');
 const loginRouter = require('./controllers/login');
+const testingRouter = require('./controllers/testing');
 const middleware = require('./utils/middleware');
 const logger = require('./utils/logger');
 
@@ -30,6 +31,9 @@ app.use(middleware.tokenExtractor);
 app.use('/api/blogs', middleware.userExtractor, blogRouter);
 app.use('/api/users', userRouter);
 app.use('/api/login', loginRouter);
+
+// we add the API endpoint testing to reset in the database
+if (process.env.NODE_ENV === 'test') app.use('/api/testing', testingRouter);
 
 app.use(middleware.unknownEndpoint);
 app.use(middleware.errorHandler);

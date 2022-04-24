@@ -1,15 +1,15 @@
 const bcrypt = require('bcrypt');
-const userRouter = require('express').Router();
+const router = require('express').Router();
 const User = require('../models/user');
 
-userRouter.get('/', async (request, response) => {
+router.get('/', async (request, response) => {
   // before this we were returning the ids of the notes with the user
   // now we are populating the actual content of each note inside the user
   const users = await User.find({}).populate('blogs');
   response.json(users);
 });
 
-userRouter.post('/', async (request, response) => {
+router.post('/', async (request, response) => {
   const { username, name, password } = request.body;
 
   if (password.length < 3) {
@@ -34,4 +34,4 @@ userRouter.post('/', async (request, response) => {
   return response.status(201).json(savedUser);
 });
 
-module.exports = userRouter;
+module.exports = router;

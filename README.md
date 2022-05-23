@@ -24,31 +24,42 @@ We are using the simple Rest client to perform some basic operations.
 
 ## Tests
 The important test is the one in blogs_supertest.test.js and its helper 'test_helper.js'.
-The others are more dummy.
 
 ## Utils
 Contains the different parts of the middleware (ex. how the token and the user are extracted from the authorization header).
 
 ## Eslint
-Using Airbnb style.
+Using Airbnb style with some modifications.
 
 ### How to run?
+
+#### Environment Variables
+
+Create a file .env in the root of the backend. It should contain:
+
+```
+TEST_MONGODB_URI=mongodb+srv://dajimenezriv:<password>@cluster0.zdudq.mongodb.net/blogs?retryWrites=true&w=majority
+MONGODB_URI=mongodb+srv://dajimenezriv:<password>@cluster0.zdudq.mongodb.net/testBlogs?retryWrites=true&w=majority
+PORT=3003
+SECRET=secret
+```
 
 #### Tests
 
 ```console
+# jest
 npm test
+# test mode (for cypress)
+npm run start:test
 ```
 
-#### Locally
+We can test manually with the requests in the `rest` folder.
 
-There is no url for frontend. But we can test manually with the requests in the `rest` folder.
+#### Locally
 
 ```console
 # development mode
 npm run dev
 # production mode
 npm start
-# test mode (for cypress)
-npm run start:test
 ```

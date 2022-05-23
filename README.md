@@ -44,6 +44,15 @@ PORT=3003
 SECRET=secret
 ```
 
+```
+npm install dotenv
+```
+
+```javascript
+require('dotenv').config();
+const MONGODB_URI = process.env.TEST_MONGODB_URI;
+```
+
 #### Tests
 
 ```console
